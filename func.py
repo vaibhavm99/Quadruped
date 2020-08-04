@@ -64,7 +64,7 @@ def down(servo):
         time.sleep(0.5)
         trial.ChangeDutyCycle(0)
     else:
-        print("This Servo can't go up")
+        print("This Servo can't go down")
 
 def up(servo):
 
@@ -172,7 +172,142 @@ def down_rear():
     servo6.ChangeDutyCycle(0)
     servo8.ChangeDutyCycle(0)
 
+def leg_outward(servo):
 
+    if servo == 1:
+        servo = servo - 1
+        trial = serv[servo]
+        angle = 100
+        trial.ChangeDutyCycle(2+(angle/18))
+        time.sleep(0.5)
+        trial.ChangeDutyCycle(0)
+    elif servo == 3:
+        servo = servo - 1
+        trial = serv[servo]
+        angle = 100
+        trial.ChangeDutyCycle(2+(angle/18))
+        time.sleep(0.5)
+        trial.ChangeDutyCycle(0)
+    elif servo == 5:
+        servo = servo - 1
+        trial = serv[servo]
+        angle = 100
+        trial.ChangeDutyCycle(2+(angle/18))
+        time.sleep(0.5)
+        trial.ChangeDutyCycle(0)
+    elif servo == 7:
+        servo = servo - 1
+        trial = serv[servo]
+        angle = 150
+        trial.ChangeDutyCycle(2+(angle/18))
+        time.sleep(0.5)
+        trial.ChangeDutyCycle(0)
+    else:
+        print("This Servo can't go foward")
+
+def leg_mid(servo):
+
+    if servo == 1:
+        servo = servo - 1
+        trial = serv[servo]
+        angle = 150
+        trial.ChangeDutyCycle(2+(angle/18))
+        time.sleep(0.5)
+        trial.ChangeDutyCycle(0)
+    elif servo == 3:
+        servo = servo - 1
+        trial = serv[servo]
+        angle = 50
+        trial.ChangeDutyCycle(2+(angle/18))
+        time.sleep(0.5)
+        trial.ChangeDutyCycle(0)
+    elif servo == 5:
+        servo = servo - 1
+        trial = serv[servo]
+        angle = 145
+        trial.ChangeDutyCycle(2+(angle/18))
+        time.sleep(0.5)
+        trial.ChangeDutyCycle(0)
+    elif servo == 7:
+        servo = servo - 1
+        trial = serv[servo]
+        angle = 100
+        trial.ChangeDutyCycle(2+(angle/18))
+        time.sleep(0.5)
+        trial.ChangeDutyCycle(0)
+    else:
+        print("This Servo can't go foward")
+
+def leg_inward(servo):
+
+    if servo == 1:
+        servo = servo - 1
+        trial = serv[servo]
+        angle = 180
+        trial.ChangeDutyCycle(2+(angle/18))
+        time.sleep(0.5)
+        trial.ChangeDutyCycle(0)
+    elif servo == 3:
+        servo = servo - 1
+        trial = serv[servo]
+        angle = 15
+        trial.ChangeDutyCycle(2+(angle/18))
+        time.sleep(0.5)
+        trial.ChangeDutyCycle(0)
+    elif servo == 5:
+            servo = servo - 1
+            trial = serv[servo]
+            angle = 180
+            trial.ChangeDutyCycle(2+(angle/18))
+            time.sleep(0.5)
+            trial.ChangeDutyCycle(0)
+    elif servo == 7:
+            servo = servo - 1
+            trial = serv[servo]
+            angle = 50
+            trial.ChangeDutyCycle(2+(angle/18))
+            time.sleep(0.5)
+            trial.ChangeDutyCycle(0)
+    else:
+        print("This Servo can't go foward")
+
+def left_forward():
+    angle1 = 180
+    angle2 = 150
+    servo1.ChangeDutyCycle(2+(angle1/18))
+    servo7.ChangeDutyCycle(2+(angle2/18))
+    time.sleep(0.5)
+    servo1.ChangeDutyCycle(0)
+    servo7.ChangeDutyCycle(0)
+
+
+def left_backward():
+    angle1 = 100
+    angle2 = 50
+    servo1.ChangeDutyCycle(2+(angle1/18))
+    servo7.ChangeDutyCycle(2+(angle2/18))
+    time.sleep(0.5)
+    servo1.ChangeDutyCycle(0)
+    servo7.ChangeDutyCycle(0)
+
+def right_forward():
+    angle1 = 15
+    angle2 = 100
+    servo3.ChangeDutyCycle(2+(angle1/18))
+    servo5.ChangeDutyCycle(2+(angle2/18))
+    time.sleep(0.5)
+    servo3.ChangeDutyCycle(0)
+    servo5.ChangeDutyCycle(0)
+
+
+def right_backward():
+    angle1 = 100
+    angle2 = 180
+    servo3.ChangeDutyCycle(2+(angle1/18))
+    servo5.ChangeDutyCycle(2+(angle2/18))
+    time.sleep(0.5)
+    servo3.ChangeDutyCycle(0)
+    servo5.ChangeDutyCycle(0)
 
 
 while True:
@@ -189,14 +324,33 @@ while True:
 # down(8)
 # up_all()
 # down_all()
-up_left()
-down_left()
-up_right()
-down_right()
-up_front()
-down_front()
-up_rear()
-down_rear()
+# up_left()
+# down_left()
+# up_right()
+# down_right()
+# up_front()
+# down_front()
+# up_rear()
+# down_rear()
+# leg_outward(1)
+# leg_mid(1)
+# leg_inward(1)
+# leg_outward(3)
+# leg_mid(3)
+# leg_inward(3)
+# leg_outward(5)
+# leg_mid(5)
+# leg_inward(5)
+# leg_outward(7)
+# leg_mid(7)
+# leg_inward(7)
+# left_forward()
+# left_backward()
+# right_forward()
+# right_backward()
+
+
+
 
 while True:
     i = raw_input()
