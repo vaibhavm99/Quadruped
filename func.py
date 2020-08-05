@@ -280,7 +280,6 @@ def left_forward():
     servo1.ChangeDutyCycle(0)
     servo7.ChangeDutyCycle(0)
 
-
 def left_backward():
     angle1 = 100
     angle2 = 50
@@ -309,11 +308,130 @@ def right_backward():
     servo3.ChangeDutyCycle(0)
     servo5.ChangeDutyCycle(0)
 
+def whole_forward():
+    angle1 = 15
+    angle2 = 100
+    angle3 = 180
+    angle4 = 150
+    servo3.ChangeDutyCycle(2+(angle1/18))
+    servo5.ChangeDutyCycle(2+(angle2/18))
+    servo1.ChangeDutyCycle(2+(angle3/18))
+    servo7.ChangeDutyCycle(2+(angle4/18))
+    time.sleep(0.5)
+    servo3.ChangeDutyCycle(0)
+    servo5.ChangeDutyCycle(0)
+    servo1.ChangeDutyCycle(0)
+    servo7.ChangeDutyCycle(0)
+
+
+def whole_forward():
+    angle1 = 15
+    angle2 = 100
+    angle3 = 180
+    angle4 = 150
+    servo3.ChangeDutyCycle(2+(angle1/18))
+    servo5.ChangeDutyCycle(2+(angle2/18))
+    servo1.ChangeDutyCycle(2+(angle3/18))
+    servo7.ChangeDutyCycle(2+(angle4/18))
+    time.sleep(0.5)
+    servo3.ChangeDutyCycle(0)
+    servo5.ChangeDutyCycle(0)
+    servo1.ChangeDutyCycle(0)
+    servo7.ChangeDutyCycle(0)
+
+def whole_backward():
+    angle1 = 100
+    angle2 = 180
+    angle3 = 100
+    angle4 = 50
+    servo3.ChangeDutyCycle(2+(angle1/18))
+    servo5.ChangeDutyCycle(2+(angle2/18))
+    servo1.ChangeDutyCycle(2+(angle3/18))
+    servo7.ChangeDutyCycle(2+(angle4/18))
+    time.sleep(0.5)
+    servo3.ChangeDutyCycle(0)
+    servo5.ChangeDutyCycle(0)
+    servo1.ChangeDutyCycle(0)
+    servo7.ChangeDutyCycle(0)
+
+def whole_mid():
+    angle1 = 150
+    angle2 = 50
+    angle3 = 145
+    angle4 = 100
+    servo1.ChangeDutyCycle(2+(angle1/18))
+    servo3.ChangeDutyCycle(2+(angle2/18))
+    servo5.ChangeDutyCycle(2+(angle3/18))
+    servo7.ChangeDutyCycle(2+(angle4/18))
+    time.sleep(0.5)
+    servo1.ChangeDutyCycle(0)
+    servo3.ChangeDutyCycle(0)
+    servo5.ChangeDutyCycle(0)
+    servo7.ChangeDutyCycle(0)
+
+
+def left_mid():
+    angle1 = 150
+    angle4 = 100
+    servo1.ChangeDutyCycle(2+(angle1/18))
+    servo7.ChangeDutyCycle(2+(angle4/18))
+    time.sleep(0.5)
+    servo1.ChangeDutyCycle(0)
+    servo7.ChangeDutyCycle(0)
+
+def right_mid():
+    angle2 = 50
+    angle3 = 145
+    servo3.ChangeDutyCycle(2+(angle2/18))
+    servo5.ChangeDutyCycle(2+(angle3/18))
+    time.sleep(0.5)
+    servo3.ChangeDutyCycle(0)
+    servo5.ChangeDutyCycle(0)
+
+def whole_outward():
+    angle1 = 100
+    angle2 = 100
+    angle3 = 100
+    angle4 = 150
+    servo1.ChangeDutyCycle(2+(angle1/18))
+    servo3.ChangeDutyCycle(2+(angle2/18))
+    servo5.ChangeDutyCycle(2+(angle3/18))
+    servo7.ChangeDutyCycle(2+(angle4/18))
+    time.sleep(0.5)
+    servo1.ChangeDutyCycle(0)
+    servo3.ChangeDutyCycle(0)
+    servo5.ChangeDutyCycle(0)
+    servo7.ChangeDutyCycle(0)
+
+
+
+def whole_inward():
+    angle1 = 180
+    angle2 = 15
+    angle3 = 180
+    angle4 = 50
+    servo1.ChangeDutyCycle(2+(angle1/18))
+    servo3.ChangeDutyCycle(2+(angle2/18))
+    servo5.ChangeDutyCycle(2+(angle3/18))
+    servo7.ChangeDutyCycle(2+(angle4/18))
+    time.sleep(0.5)
+    servo1.ChangeDutyCycle(0)
+    servo3.ChangeDutyCycle(0)
+    servo5.ChangeDutyCycle(0)
+    servo7.ChangeDutyCycle(0)
+
+
+
+
+
 
 while True:
     i = raw_input()
     if i == 'q':
         break
+        
+        
+        
 # up(2)
 # up(4)
 # up(6)
@@ -348,7 +466,13 @@ while True:
 # left_backward()
 # right_forward()
 # right_backward()
-
+# whole_forward()
+# whole_backward()
+# left_mid()
+# right_mid()
+# whole_mid()
+# whole_outward()
+# whole_inward()
 
 
 
