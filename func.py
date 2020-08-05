@@ -308,21 +308,6 @@ def right_backward():
     servo3.ChangeDutyCycle(0)
     servo5.ChangeDutyCycle(0)
 
-def whole_forward():
-    angle1 = 15
-    angle2 = 100
-    angle3 = 180
-    angle4 = 150
-    servo3.ChangeDutyCycle(2+(angle1/18))
-    servo5.ChangeDutyCycle(2+(angle2/18))
-    servo1.ChangeDutyCycle(2+(angle3/18))
-    servo7.ChangeDutyCycle(2+(angle4/18))
-    time.sleep(0.5)
-    servo3.ChangeDutyCycle(0)
-    servo5.ChangeDutyCycle(0)
-    servo1.ChangeDutyCycle(0)
-    servo7.ChangeDutyCycle(0)
-
 
 def whole_forward():
     angle1 = 15
