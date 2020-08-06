@@ -65,70 +65,161 @@ def home():
     up(8)
     up_all()
 
+
+
+
+
+
 def forward():
-    up_all()
-    # home()
-    time.sleep(1)
     # Step 1
-    down(2)
-    leg_outward(1)
-    up(2)
-    down(8)
-    leg_mid(7)
-    up(8)
-    down(4)
-    leg_mid(3)
-    up(4)
+    up_all()
+    time.sleep(1)
+    # down(2)
+    # leg_mid(1)
+    # up(2)
+    #
+    # down(4)
+    # leg_mid(3)
+    # up(4)
+
+    # down(6)
+    # leg_outward(5)
+    # up(6)
+    #
+    # down(8)
+    # leg_outward(7)
+    # up(8)
+
+    servo2.ChangeDutyCycle(10.33)
+    servo4.ChangeDutyCycle(10.33)
+    servo6.ChangeDutyCycle(10.33)
+    servo8.ChangeDutyCycle(10.33)
+    time.sleep(0.5)
+    # Step 2
     down(6)
     leg_mid(5)
     up(6)
-    # Step 2
-    down(4)
-    leg_outward(3)
-    up(4)
+
+    servo2.ChangeDutyCycle(10.33)
+    servo4.ChangeDutyCycle(10.33)
+    servo6.ChangeDutyCycle(10.33)
+    servo8.ChangeDutyCycle(10.33)
+    time.sleep(0.5)
     # Step 3
-    step()
+    right_forward()
+
+    servo2.ChangeDutyCycle(10.33)
+    servo4.ChangeDutyCycle(10.33)
+    servo6.ChangeDutyCycle(10.33)
+    servo8.ChangeDutyCycle(10.33)
+    time.sleep(0.5)
     # Step 4
     up_all()
-    time.sleep(0.3)
+    down(8)
+    leg_mid(7)
+    up(8)
+
+    servo2.ChangeDutyCycle(10.33)
+    servo4.ChangeDutyCycle(10.33)
+    servo6.ChangeDutyCycle(10.33)
+    servo8.ChangeDutyCycle(10.33)
+    time.sleep(0.5)
+    # Step 5
+    left_forward()
+    up_all()
+
+    servo2.ChangeDutyCycle(10.33)
+    servo4.ChangeDutyCycle(10.33)
+    servo6.ChangeDutyCycle(10.33)
+    servo8.ChangeDutyCycle(10.33)
+    time.sleep(0.5)
+    # Step 6
+    up_all()
+    time.sleep(1)
+    down(6)
+    leg_inward(5)
+    up(6)
+
+    servo2.ChangeDutyCycle(10.33)
+    servo4.ChangeDutyCycle(10.33)
+    servo6.ChangeDutyCycle(10.33)
+    servo8.ChangeDutyCycle(10.33)
+    time.sleep(0.5)
+    # Step 7
+    up_all()
+    down(4)
+    up(6)
+    leg_mid(3)
+    up(4)
+
+
+    servo2.ChangeDutyCycle(10.33)
+    servo4.ChangeDutyCycle(10.33)
+    servo6.ChangeDutyCycle(10.33)
+    servo8.ChangeDutyCycle(10.33)
+    time.sleep(0.5)
+    # Step 8
+    down(6)
+    leg_outward(5)
+    up(6)
+
+    servo2.ChangeDutyCycle(10.33)
+    servo4.ChangeDutyCycle(10.33)
+    servo6.ChangeDutyCycle(10.33)
+    servo8.ChangeDutyCycle(10.33)
+    time.sleep(0.5)
+    # Step 9
+    down(8)
+    leg_inward(7)
+    up(8)
     down(2)
     leg_mid(1)
     up(2)
+
+
+    servo2.ChangeDutyCycle(10.33)
+    servo4.ChangeDutyCycle(10.33)
+    servo6.ChangeDutyCycle(10.33)
+    servo8.ChangeDutyCycle(10.33)
+    time.sleep(0.5)
+    # Step 10
+    left_forward()
+
+
+
+
+    servo2.ChangeDutyCycle(10.33)
+    servo4.ChangeDutyCycle(10.33)
+    servo6.ChangeDutyCycle(10.33)
+    servo8.ChangeDutyCycle(10.33)
+    time.sleep(0.5)
+    # Step 11
     down(8)
-    leg_mid(7)
+    leg_inward(7)
     up(8)
-    down(4)
-    leg_outward(3)
-    up(4)
-    down(6)
-    leg_mid(5)
-    up(6)
-    # Step 5
+
+    servo2.ChangeDutyCycle(10.33)
+    servo4.ChangeDutyCycle(10.33)
+    servo6.ChangeDutyCycle(10.33)
+    servo8.ChangeDutyCycle(10.33)
+    time.sleep(0.5)
+    # Step 12
     down(2)
-    leg_outward(1)
+    leg_mid(1)
     up(2)
-    # Step 6
-    step()
-    # Step 7
-    down(2)
-    leg_outward(1)
-    up(2)
+
+    servo2.ChangeDutyCycle(10.33)
+    servo4.ChangeDutyCycle(10.33)
+    servo6.ChangeDutyCycle(10.33)
+    servo8.ChangeDutyCycle(10.33)
+    time.sleep(0.5)
+    # Step 13
     down(8)
-    leg_mid(7)
+    leg_outward(7)
     up(8)
-    down(4)
-    leg_mid(3)
-    up(4)
-    down(6)
-    leg_mid(5)
-    up(6)
 
-
-
-    up_all()
-    time.sleep(1)
-    home()
-forward()
+while True:
+    forward()
 
 
 servo1.stop(0)
