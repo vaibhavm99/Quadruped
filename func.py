@@ -53,7 +53,7 @@ servo8.start(0)
 # eight = [0,180]
 
 serv = [servo1, servo2, servo3, servo4, servo5, servo6, servo7, servo8]
-
+t = 0.1
 def down(servo):
 
     if servo % 2 == 0:
@@ -61,7 +61,7 @@ def down(servo):
         trial = serv[servo]
         angle = 0
         trial.ChangeDutyCycle(2+(angle/18))
-        time.sleep(0.5)
+        time.sleep(t)
         trial.ChangeDutyCycle(0)
     else:
         print("This Servo can't go down")
@@ -73,8 +73,8 @@ def up(servo):
         trial = serv[servo]
         angle = 150
         trial.ChangeDutyCycle(2+(angle/18))
-        time.sleep(0.5)
-        trial.ChangeDutyCycle(0)
+        time.sleep(t)
+        # trial.ChangeDutyCycle(0)
     else:
         print("This Servo can't go up")
 
@@ -84,11 +84,11 @@ def up_all():
     servo4.ChangeDutyCycle(2+(angle/18))
     servo6.ChangeDutyCycle(2+(angle/18))
     servo8.ChangeDutyCycle(2+(angle/18))
-    time.sleep(0.5)
-    servo2.ChangeDutyCycle(0)
-    servo4.ChangeDutyCycle(0)
-    servo6.ChangeDutyCycle(0)
-    servo8.ChangeDutyCycle(0)
+    time.sleep(t)
+    # servo2.ChangeDutyCycle(0)
+    # servo4.ChangeDutyCycle(0)
+    # servo6.ChangeDutyCycle(0)
+    # servo8.ChangeDutyCycle(0)
 
 def down_all():
     angle = 0
@@ -96,7 +96,7 @@ def down_all():
     servo4.ChangeDutyCycle(2+(angle/18))
     servo6.ChangeDutyCycle(2+(angle/18))
     servo8.ChangeDutyCycle(2+(angle/18))
-    time.sleep(0.5)
+    time.sleep(t)
     servo2.ChangeDutyCycle(0)
     servo4.ChangeDutyCycle(0)
     servo6.ChangeDutyCycle(0)
@@ -106,15 +106,15 @@ def up_right():
     angle = 150
     servo4.ChangeDutyCycle(2+(angle/18))
     servo6.ChangeDutyCycle(2+(angle/18))
-    time.sleep(0.5)
-    servo4.ChangeDutyCycle(0)
-    servo6.ChangeDutyCycle(0)
+    time.sleep(t)
+    # servo4.ChangeDutyCycle(0)
+    # servo6.ChangeDutyCycle(0)
 
 def down_right():
     angle = 0
     servo4.ChangeDutyCycle(2+(angle/18))
     servo6.ChangeDutyCycle(2+(angle/18))
-    time.sleep(0.5)
+    time.sleep(t)
     servo4.ChangeDutyCycle(0)
     servo6.ChangeDutyCycle(0)
 
@@ -122,15 +122,15 @@ def up_left():
     angle = 150
     servo2.ChangeDutyCycle(2+(angle/18))
     servo8.ChangeDutyCycle(2+(angle/18))
-    time.sleep(0.5)
-    servo2.ChangeDutyCycle(0)
-    servo8.ChangeDutyCycle(0)
+    time.sleep(t)
+    # servo2.ChangeDutyCycle(0)
+    # servo8.ChangeDutyCycle(0)
 
 def down_left():
     angle = 0
     servo2.ChangeDutyCycle(2+(angle/18))
     servo8.ChangeDutyCycle(2+(angle/18))
-    time.sleep(0.5)
+    time.sleep(t)
     servo2.ChangeDutyCycle(0)
     servo8.ChangeDutyCycle(0)
 
@@ -140,16 +140,16 @@ def up_front():
     angle = 150
     servo2.ChangeDutyCycle(2+(angle/18))
     servo4.ChangeDutyCycle(2+(angle/18))
-    time.sleep(0.5)
-    servo2.ChangeDutyCycle(0)
-    servo4.ChangeDutyCycle(0)
+    time.sleep(t)
+    # servo2.ChangeDutyCycle(0)
+    # servo4.ChangeDutyCycle(0)
 
 
 def down_front():
     angle = 0
     servo2.ChangeDutyCycle(2+(angle/18))
     servo4.ChangeDutyCycle(2+(angle/18))
-    time.sleep(0.5)
+    time.sleep(t)
     servo2.ChangeDutyCycle(0)
     servo4.ChangeDutyCycle(0)
 
@@ -159,16 +159,16 @@ def up_rear():
     angle = 150
     servo6.ChangeDutyCycle(2+(angle/18))
     servo8.ChangeDutyCycle(2+(angle/18))
-    time.sleep(0.5)
-    servo6.ChangeDutyCycle(0)
-    servo8.ChangeDutyCycle(0)
+    time.sleep(t)
+    # servo6.ChangeDutyCycle(0)
+    # servo8.ChangeDutyCycle(0)
 
 
 def down_rear():
     angle = 0
     servo6.ChangeDutyCycle(2+(angle/18))
     servo8.ChangeDutyCycle(2+(angle/18))
-    time.sleep(0.5)
+    time.sleep(t)
     servo6.ChangeDutyCycle(0)
     servo8.ChangeDutyCycle(0)
 
@@ -179,28 +179,28 @@ def leg_outward(servo):
         trial = serv[servo]
         angle = 100
         trial.ChangeDutyCycle(2+(angle/18))
-        time.sleep(0.5)
+        time.sleep(t)
         trial.ChangeDutyCycle(0)
     elif servo == 3:
         servo = servo - 1
         trial = serv[servo]
         angle = 100
         trial.ChangeDutyCycle(2+(angle/18))
-        time.sleep(0.5)
+        time.sleep(t)
         trial.ChangeDutyCycle(0)
     elif servo == 5:
         servo = servo - 1
         trial = serv[servo]
         angle = 100
         trial.ChangeDutyCycle(2+(angle/18))
-        time.sleep(0.5)
+        time.sleep(t)
         trial.ChangeDutyCycle(0)
     elif servo == 7:
         servo = servo - 1
         trial = serv[servo]
         angle = 150
         trial.ChangeDutyCycle(2+(angle/18))
-        time.sleep(0.5)
+        time.sleep(t)
         trial.ChangeDutyCycle(0)
     else:
         print("This Servo can't go foward")
@@ -212,28 +212,28 @@ def leg_mid(servo):
         trial = serv[servo]
         angle = 150
         trial.ChangeDutyCycle(2+(angle/18))
-        time.sleep(0.5)
+        time.sleep(t)
         trial.ChangeDutyCycle(0)
     elif servo == 3:
         servo = servo - 1
         trial = serv[servo]
         angle = 50
         trial.ChangeDutyCycle(2+(angle/18))
-        time.sleep(0.5)
+        time.sleep(t)
         trial.ChangeDutyCycle(0)
     elif servo == 5:
         servo = servo - 1
         trial = serv[servo]
         angle = 145
         trial.ChangeDutyCycle(2+(angle/18))
-        time.sleep(0.5)
+        time.sleep(t)
         trial.ChangeDutyCycle(0)
     elif servo == 7:
         servo = servo - 1
         trial = serv[servo]
         angle = 100
         trial.ChangeDutyCycle(2+(angle/18))
-        time.sleep(0.5)
+        time.sleep(t)
         trial.ChangeDutyCycle(0)
     else:
         print("This Servo can't go foward")
@@ -245,28 +245,28 @@ def leg_inward(servo):
         trial = serv[servo]
         angle = 180
         trial.ChangeDutyCycle(2+(angle/18))
-        time.sleep(0.5)
+        time.sleep(t)
         trial.ChangeDutyCycle(0)
     elif servo == 3:
         servo = servo - 1
         trial = serv[servo]
         angle = 15
         trial.ChangeDutyCycle(2+(angle/18))
-        time.sleep(0.5)
+        time.sleep(t)
         trial.ChangeDutyCycle(0)
     elif servo == 5:
             servo = servo - 1
             trial = serv[servo]
             angle = 180
             trial.ChangeDutyCycle(2+(angle/18))
-            time.sleep(0.5)
+            time.sleep(t)
             trial.ChangeDutyCycle(0)
     elif servo == 7:
             servo = servo - 1
             trial = serv[servo]
             angle = 50
             trial.ChangeDutyCycle(2+(angle/18))
-            time.sleep(0.5)
+            time.sleep(t)
             trial.ChangeDutyCycle(0)
     else:
         print("This Servo can't go foward")
@@ -276,7 +276,7 @@ def left_forward():
     angle2 = 150
     servo1.ChangeDutyCycle(2+(angle1/18))
     servo7.ChangeDutyCycle(2+(angle2/18))
-    time.sleep(0.5)
+    time.sleep(t)
     servo1.ChangeDutyCycle(0)
     servo7.ChangeDutyCycle(0)
 
@@ -285,7 +285,7 @@ def left_backward():
     angle2 = 50
     servo1.ChangeDutyCycle(2+(angle1/18))
     servo7.ChangeDutyCycle(2+(angle2/18))
-    time.sleep(0.5)
+    time.sleep(t)
     servo1.ChangeDutyCycle(0)
     servo7.ChangeDutyCycle(0)
 
@@ -294,7 +294,7 @@ def right_forward():
     angle2 = 100
     servo3.ChangeDutyCycle(2+(angle1/18))
     servo5.ChangeDutyCycle(2+(angle2/18))
-    time.sleep(0.5)
+    time.sleep(t)
     servo3.ChangeDutyCycle(0)
     servo5.ChangeDutyCycle(0)
 
@@ -304,9 +304,24 @@ def right_backward():
     angle2 = 180
     servo3.ChangeDutyCycle(2+(angle1/18))
     servo5.ChangeDutyCycle(2+(angle2/18))
-    time.sleep(0.5)
+    time.sleep(t)
     servo3.ChangeDutyCycle(0)
     servo5.ChangeDutyCycle(0)
+
+def whole_forward():
+    angle1 = 15
+    angle2 = 100
+    angle3 = 180
+    angle4 = 150
+    servo3.ChangeDutyCycle(2+(angle1/18))
+    servo5.ChangeDutyCycle(2+(angle2/18))
+    servo1.ChangeDutyCycle(2+(angle3/18))
+    servo7.ChangeDutyCycle(2+(angle4/18))
+    time.sleep(t)
+    servo3.ChangeDutyCycle(0)
+    servo5.ChangeDutyCycle(0)
+    servo1.ChangeDutyCycle(0)
+    servo7.ChangeDutyCycle(0)
 
 
 def whole_forward():
@@ -318,7 +333,7 @@ def whole_forward():
     servo5.ChangeDutyCycle(2+(angle2/18))
     servo1.ChangeDutyCycle(2+(angle3/18))
     servo7.ChangeDutyCycle(2+(angle4/18))
-    time.sleep(0.5)
+    time.sleep(t)
     servo3.ChangeDutyCycle(0)
     servo5.ChangeDutyCycle(0)
     servo1.ChangeDutyCycle(0)
@@ -333,7 +348,7 @@ def whole_backward():
     servo5.ChangeDutyCycle(2+(angle2/18))
     servo1.ChangeDutyCycle(2+(angle3/18))
     servo7.ChangeDutyCycle(2+(angle4/18))
-    time.sleep(0.5)
+    time.sleep(t)
     servo3.ChangeDutyCycle(0)
     servo5.ChangeDutyCycle(0)
     servo1.ChangeDutyCycle(0)
@@ -348,7 +363,7 @@ def whole_mid():
     servo3.ChangeDutyCycle(2+(angle2/18))
     servo5.ChangeDutyCycle(2+(angle3/18))
     servo7.ChangeDutyCycle(2+(angle4/18))
-    time.sleep(0.5)
+    time.sleep(t)
     servo1.ChangeDutyCycle(0)
     servo3.ChangeDutyCycle(0)
     servo5.ChangeDutyCycle(0)
@@ -360,7 +375,7 @@ def left_mid():
     angle4 = 100
     servo1.ChangeDutyCycle(2+(angle1/18))
     servo7.ChangeDutyCycle(2+(angle4/18))
-    time.sleep(0.5)
+    time.sleep(t)
     servo1.ChangeDutyCycle(0)
     servo7.ChangeDutyCycle(0)
 
@@ -369,7 +384,7 @@ def right_mid():
     angle3 = 145
     servo3.ChangeDutyCycle(2+(angle2/18))
     servo5.ChangeDutyCycle(2+(angle3/18))
-    time.sleep(0.5)
+    time.sleep(t)
     servo3.ChangeDutyCycle(0)
     servo5.ChangeDutyCycle(0)
 
@@ -382,7 +397,7 @@ def whole_outward():
     servo3.ChangeDutyCycle(2+(angle2/18))
     servo5.ChangeDutyCycle(2+(angle3/18))
     servo7.ChangeDutyCycle(2+(angle4/18))
-    time.sleep(0.5)
+    time.sleep(t)
     servo1.ChangeDutyCycle(0)
     servo3.ChangeDutyCycle(0)
     servo5.ChangeDutyCycle(0)
@@ -399,7 +414,21 @@ def whole_inward():
     servo3.ChangeDutyCycle(2+(angle2/18))
     servo5.ChangeDutyCycle(2+(angle3/18))
     servo7.ChangeDutyCycle(2+(angle4/18))
-    time.sleep(0.5)
+    time.sleep(t)
+    servo1.ChangeDutyCycle(0)
+    servo3.ChangeDutyCycle(0)
+    servo5.ChangeDutyCycle(0)
+    servo7.ChangeDutyCycle(0)
+def step():
+    angle1 = 150
+    angle2 = 50
+    angle3 = 100
+    angle4 = 150
+    servo1.ChangeDutyCycle(2+(angle1/18))
+    servo3.ChangeDutyCycle(2+(angle2/18))
+    servo5.ChangeDutyCycle(2+(angle3/18))
+    servo7.ChangeDutyCycle(2+(angle4/18))
+    time.sleep(t)
     servo1.ChangeDutyCycle(0)
     servo3.ChangeDutyCycle(0)
     servo5.ChangeDutyCycle(0)
@@ -409,14 +438,10 @@ def whole_inward():
 
 
 
-
-while True:
-    i = raw_input()
-    if i == 'q':
-        break
-        
-        
-        
+# while True:
+#     i = raw_input()
+#     if i == 'q':
+#         break
 # up(2)
 # up(4)
 # up(6)
@@ -461,10 +486,10 @@ while True:
 
 
 
-while True:
-    i = raw_input()
-    if i == 'q':
-        break
+# while True:
+#     i = raw_input()
+#     if i == 'q':
+#         break
 
 #Clean things up at the end
 servo1.stop(0)
