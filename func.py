@@ -53,7 +53,7 @@ servo8.start(0)
 # eight = [0,180]
 
 serv = [servo1, servo2, servo3, servo4, servo5, servo6, servo7, servo8]
-t = 0.1
+t = 0.5
 def down(servo):
 
     if servo % 2 == 0:
