@@ -46,7 +46,7 @@ servo8.start(0)
 
 
 serv = [servo1, servo2, servo3, servo4, servo5, servo6, servo7, servo8]
-
+t = 0.4
 
 def home():
     up_all()
@@ -72,29 +72,17 @@ def home():
 
 def forward():
     # Step 1
-    up_all()
-    time.sleep(1)
-    # down(2)
-    # leg_mid(1)
-    # up(2)
-    #
-    # down(4)
-    # leg_mid(3)
-    # up(4)
+    # up_all()
+    # time.sleep(1)
 
-    # down(6)
-    # leg_outward(5)
-    # up(6)
-    #
-    # down(8)
-    # leg_outward(7)
-    # up(8)
+
+
 
     servo2.ChangeDutyCycle(10.33)
     servo4.ChangeDutyCycle(10.33)
     servo6.ChangeDutyCycle(10.33)
     servo8.ChangeDutyCycle(10.33)
-    time.sleep(0.5)
+    time.sleep(t)
     # Step 2
     down(6)
     leg_mid(5)
@@ -104,7 +92,7 @@ def forward():
     servo4.ChangeDutyCycle(10.33)
     servo6.ChangeDutyCycle(10.33)
     servo8.ChangeDutyCycle(10.33)
-    time.sleep(0.5)
+    time.sleep(t)
     # Step 3
     right_forward()
 
@@ -112,9 +100,9 @@ def forward():
     servo4.ChangeDutyCycle(10.33)
     servo6.ChangeDutyCycle(10.33)
     servo8.ChangeDutyCycle(10.33)
-    time.sleep(0.5)
+    time.sleep(t)
     # Step 4
-    up_all()
+    # up_all()
     down(8)
     leg_mid(7)
     up(8)
@@ -123,19 +111,19 @@ def forward():
     servo4.ChangeDutyCycle(10.33)
     servo6.ChangeDutyCycle(10.33)
     servo8.ChangeDutyCycle(10.33)
-    time.sleep(0.5)
+    time.sleep(t)
     # Step 5
     left_forward()
     up_all()
-
+##################################################
     servo2.ChangeDutyCycle(10.33)
     servo4.ChangeDutyCycle(10.33)
     servo6.ChangeDutyCycle(10.33)
     servo8.ChangeDutyCycle(10.33)
-    time.sleep(0.5)
+    time.sleep(t)
     # Step 6
     up_all()
-    time.sleep(1)
+    # time.sleep(1)
     down(6)
     leg_inward(5)
     up(6)
@@ -144,11 +132,10 @@ def forward():
     servo4.ChangeDutyCycle(10.33)
     servo6.ChangeDutyCycle(10.33)
     servo8.ChangeDutyCycle(10.33)
-    time.sleep(0.5)
+    time.sleep(t)
     # Step 7
     up_all()
     down(4)
-    up(6)
     leg_mid(3)
     up(4)
 
@@ -157,7 +144,7 @@ def forward():
     servo4.ChangeDutyCycle(10.33)
     servo6.ChangeDutyCycle(10.33)
     servo8.ChangeDutyCycle(10.33)
-    time.sleep(0.5)
+    time.sleep(t)
     # Step 8
     down(6)
     leg_outward(5)
@@ -167,60 +154,53 @@ def forward():
     servo4.ChangeDutyCycle(10.33)
     servo6.ChangeDutyCycle(10.33)
     servo8.ChangeDutyCycle(10.33)
-    time.sleep(0.5)
+    time.sleep(t)
     # Step 9
     down(8)
     leg_inward(7)
     up(8)
-    down(2)
-    leg_mid(1)
-    up(2)
-
 
     servo2.ChangeDutyCycle(10.33)
     servo4.ChangeDutyCycle(10.33)
     servo6.ChangeDutyCycle(10.33)
     servo8.ChangeDutyCycle(10.33)
-    time.sleep(0.5)
+    time.sleep(t)
     # Step 10
-    left_forward()
-
-
-
-
-    servo2.ChangeDutyCycle(10.33)
-    servo4.ChangeDutyCycle(10.33)
-    servo6.ChangeDutyCycle(10.33)
-    servo8.ChangeDutyCycle(10.33)
-    time.sleep(0.5)
-    # Step 11
-    down(8)
-    leg_inward(7)
-    up(8)
-
-    servo2.ChangeDutyCycle(10.33)
-    servo4.ChangeDutyCycle(10.33)
-    servo6.ChangeDutyCycle(10.33)
-    servo8.ChangeDutyCycle(10.33)
-    time.sleep(0.5)
-    # Step 12
     down(2)
     leg_mid(1)
     up(2)
 
+
+
     servo2.ChangeDutyCycle(10.33)
     servo4.ChangeDutyCycle(10.33)
     servo6.ChangeDutyCycle(10.33)
     servo8.ChangeDutyCycle(10.33)
-    time.sleep(0.5)
-    # Step 13
+    time.sleep(t)
+    # Step 11
     down(8)
     leg_outward(7)
     up(8)
 
-while True:
-    forward()
 
+
+
+
+
+try:
+    up_all()
+    time.sleep(t)
+    down(6)
+    leg_outward(5)
+    up(6)
+
+    down(8)
+    leg_outward(7)
+    up(8)
+    while True:
+        forward()
+except KeyboardInterrupt:
+    down_all()
 
 servo1.stop(0)
 servo2.stop(0)
