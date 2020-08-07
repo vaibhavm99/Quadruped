@@ -282,7 +282,7 @@ def left_forward():
 
 def left_backward():
     angle1 = 100
-    angle2 = 50
+    angle2 = 20
     servo1.ChangeDutyCycle(2+(angle1/18))
     servo7.ChangeDutyCycle(2+(angle2/18))
     time.sleep(t)
@@ -357,8 +357,8 @@ def whole_backward():
 def whole_mid():
     angle1 = 150
     angle2 = 50
-    angle3 = 145
-    angle4 = 100
+    angle3 = 140
+    angle4 = 110
     servo1.ChangeDutyCycle(2+(angle1/18))
     servo3.ChangeDutyCycle(2+(angle2/18))
     servo5.ChangeDutyCycle(2+(angle3/18))
