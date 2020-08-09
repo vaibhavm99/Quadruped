@@ -224,14 +224,14 @@ def leg_mid(servo):
     elif servo == 5:
         servo = servo - 1
         trial = serv[servo]
-        angle = 145
+        angle = 140
         trial.ChangeDutyCycle(2+(angle/18))
         time.sleep(t)
         trial.ChangeDutyCycle(0)
     elif servo == 7:
         servo = servo - 1
         trial = serv[servo]
-        angle = 100
+        angle = 110
         trial.ChangeDutyCycle(2+(angle/18))
         time.sleep(t)
         trial.ChangeDutyCycle(0)
