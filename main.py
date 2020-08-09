@@ -25,9 +25,9 @@ GPIO.setup(four, GPIO.OUT)
 GPIO.setup(five, GPIO.OUT)
 GPIO.setup(six, GPIO.OUT)
 GPIO.setup(seven, GPIO.OUT)
-print("a")
+
 GPIO.setup(eight, GPIO.OUT)
-print("b")
+
 servo1 = GPIO.PWM(one, 50)
 servo2 = GPIO.PWM(two, 50)
 servo3 = GPIO.PWM(three, 50)
@@ -47,7 +47,7 @@ servo6.start(0)
 servo7.start(0)
 servo8.start(0)
 
-print("c")
+
 serv = [servo1, servo2, servo3, servo4, servo5, servo6, servo7, servo8]
 t = 0.4
 
@@ -74,7 +74,6 @@ def home():
 
 
 def forward():
-    print("e")
     # Right Side
     right_forward()
     # down(6)
@@ -112,7 +111,7 @@ def forward():
 
 try:
     # whole_mid()
-    print("d")
+  
     up_all()
     time.sleep(1)
     # whole_mid()
