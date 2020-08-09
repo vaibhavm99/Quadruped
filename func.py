@@ -210,28 +210,28 @@ def leg_mid(servo):
     if servo == 1:
         servo = servo - 1
         trial = serv[servo]
-        angle = 150
+        angle = 145
         trial.ChangeDutyCycle(2+(angle/18))
         time.sleep(t)
         trial.ChangeDutyCycle(0)
     elif servo == 3:
         servo = servo - 1
         trial = serv[servo]
-        angle = 50
+        angle = 53
         trial.ChangeDutyCycle(2+(angle/18))
         time.sleep(t)
         trial.ChangeDutyCycle(0)
     elif servo == 5:
         servo = servo - 1
         trial = serv[servo]
-        angle = 140
+        angle = 143
         trial.ChangeDutyCycle(2+(angle/18))
         time.sleep(t)
         trial.ChangeDutyCycle(0)
     elif servo == 7:
         servo = servo - 1
         trial = serv[servo]
-        angle = 110
+        angle = 100
         trial.ChangeDutyCycle(2+(angle/18))
         time.sleep(t)
         trial.ChangeDutyCycle(0)
@@ -355,10 +355,10 @@ def whole_backward():
     servo7.ChangeDutyCycle(0)
 
 def whole_mid():
-    angle1 = 150
-    angle2 = 50
-    angle3 = 140
-    angle4 = 110
+    angle1 = 145
+    angle2 = 53
+    angle3 = 143
+    angle4 = 100
     servo1.ChangeDutyCycle(2+(angle1/18))
     servo3.ChangeDutyCycle(2+(angle2/18))
     servo5.ChangeDutyCycle(2+(angle3/18))
@@ -371,7 +371,7 @@ def whole_mid():
 
 
 def left_mid():
-    angle1 = 150
+    angle1 = 145
     angle4 = 100
     servo1.ChangeDutyCycle(2+(angle1/18))
     servo7.ChangeDutyCycle(2+(angle4/18))
@@ -380,8 +380,8 @@ def left_mid():
     servo7.ChangeDutyCycle(0)
 
 def right_mid():
-    angle2 = 50
-    angle3 = 145
+    angle2 = 53
+    angle3 = 143
     servo3.ChangeDutyCycle(2+(angle2/18))
     servo5.ChangeDutyCycle(2+(angle3/18))
     time.sleep(t)
