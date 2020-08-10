@@ -1,6 +1,6 @@
 from func import *
 import time
-
+import keyboard
 # Define pins
 one = 29
 two = 31
@@ -72,23 +72,7 @@ def home():
 
 
 
-
-def forward():
-    # Right Side
-    right_forward()
-    # down(6)
-    leg_inward(5)
-    # up(6)
-
-    down(4)
-    leg_mid(3)
-    up(4)
-
-
-    # down(6)
-    leg_mid(5)
-    # up(6)
-
+def left():
     # Left Side
     left_forward()
     # down(8)
@@ -108,17 +92,71 @@ def forward():
 
 
 
+def right():
+    # Right Side
+    right_forward()
+    # down(6)
+    leg_inward(5)
+    # up(6)
 
-try:
-    # whole_mid()
-  
-    up_all()
-    time.sleep(1)
-    # whole_mid()
-    while True:
+    down(4)
+    leg_mid(3)
+    up(4)
+
+
+    # down(6)
+    leg_mid(5)
+    # up(6)
+
+
+def backward():
+    # Right Side
+    right_backward()
+
+    down(4)
+    leg_mid(3)
+    up(4)
+
+    leg_mid(5)
+
+    # Left Side
+    left_backward()
+
+    down(2)
+    leg_mid(1)
+    up(2)
+
+    leg_mid(7)
+
+
+
+def forward():
+    right()
+    left()
+
+
+up_all()
+time.sleep(1)
+while True:
+    if keyboard.is_pressed('w'):  # if key 'q' is pressed
+        print('forward')
         forward()
-except KeyboardInterrupt:
-    down_all()
+    elif keyboard.is_pressed('s'):  # if key 'q' is pressed
+        print('backward')
+        backward()
+    elif keyboard.is_pressed('q'):  # if key 'q' is pressed
+        print('Shut down')
+        down_all()
+        break
+    elif keyboard.is_pressed('d'):  # if key 'q' is pressed
+        print('left')
+        left()
+    elif keyboard.is_pressed('a'):  # if key 'q' is pressed
+        print('right')
+        right()
+    else:
+        up_all()
+
 
 servo1.stop(0)
 servo2.stop(0)
@@ -129,4 +167,4 @@ servo6.stop(0)
 servo7.stop(0)
 servo8.stop(0)
 
-# GPIO.cleanup()
+GPIO.cleanup()
