@@ -274,6 +274,9 @@ def leg_inward(servo):
 def left_forward():
     angle1 = 180
     angle2 = 150
+    angle = 150
+    servo6.ChangeDutyCycle(2+(angle/18))
+    servo8.ChangeDutyCycle(2+(angle/18))
     servo1.ChangeDutyCycle(2+(angle1/18))
     servo7.ChangeDutyCycle(2+(angle2/18))
     time.sleep(t)
@@ -283,6 +286,10 @@ def left_forward():
 def left_backward():
     angle1 = 100
     angle2 = 20
+    angle = 150
+    servo6.ChangeDutyCycle(2+(angle/18))
+    servo8.ChangeDutyCycle(2+(angle/18))
+    # time.sleep(0.5)
     servo1.ChangeDutyCycle(2+(angle1/18))
     servo7.ChangeDutyCycle(2+(angle2/18))
     time.sleep(t)
@@ -292,6 +299,9 @@ def left_backward():
 def right_forward():
     angle1 = 15
     angle2 = 100
+    angle = 150
+    servo6.ChangeDutyCycle(2+(angle/18))
+    servo8.ChangeDutyCycle(2+(angle/18))
     servo3.ChangeDutyCycle(2+(angle1/18))
     servo5.ChangeDutyCycle(2+(angle2/18))
     time.sleep(t)
@@ -302,6 +312,9 @@ def right_forward():
 def right_backward():
     angle1 = 100
     angle2 = 180
+    angle = 150
+    servo6.ChangeDutyCycle(2+(angle/18))
+    servo8.ChangeDutyCycle(2+(angle/18))
     servo3.ChangeDutyCycle(2+(angle1/18))
     servo5.ChangeDutyCycle(2+(angle2/18))
     time.sleep(t)
