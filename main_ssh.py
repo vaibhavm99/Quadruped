@@ -156,6 +156,9 @@ while True:
     elif key == 'a':
         print('right')
         right()
+    elif key == 'c':
+        print("down")
+        down_all()
     else:
         up_all()
 
