@@ -19,7 +19,7 @@ Color_Text = (0, 255, 0)
 Color_Highlight = (0, 0, 255)
 left_color, right_color, forward_color, backward_color = Color_Text, Color_Text, Color_Text, Color_Text
 isFist = False
-
+flag = 0
 while True:
     start = time.time()
     ret, imgg = cap.read()
@@ -66,6 +66,7 @@ while True:
     for i in range(1): #len(boxes)
         left_color, right_color, forward_color, backward_color = Color_Text, Color_Text, Color_Text, Color_Text
         isFist = False
+
         if i in indexes:
             x, y, w, h = boxes[i]
             label = str(classes[class_ids[i]])
@@ -77,6 +78,7 @@ while True:
             p_x = x + int(w/2)
             p_y = y + int(h/2)
             if label == "Fist":
+                flag = 1
                 isFist = True
             if(155 <= p_x <= 450 and 68 <= p_y <= 181):
                 where = "Forward"
@@ -86,10 +88,15 @@ while True:
                 where = "Left"
             elif(390 <= p_x <= 625 and 186 <= p_y <= 307):
                 where = "Right"
+            if flag == 1 and isFist == False:
+                flag = 2
 
 
     if not isFist:
-        if(where == "Forward"):
+        if flag == 2:
+            keyboard.press_and_release("u")
+            flag = 0
+        elif(where == "Forward"):
             forward_color = Color_Highlight
             keyboard.press_and_release('w')
         elif(where == "Backward"):
