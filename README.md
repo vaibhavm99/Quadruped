@@ -8,3 +8,6 @@ Hand_Gesture_Remote.py is for Laptop to detect hand gestures and simulate keyboa
 Rest all files are for controlling the Raspberry Pi.\
 The Raspberyy Pi and Laptop should be connected to each other.\
 The main_ssh.py file is to be run, this file accepts input such was 'w', 'a', 's', 'd', etc from the Laptop Keyboard and the Bot in the required direction.\
+
+# Hand Gesture
+Hand Gestures are detected by training a Tiny Yolo v3 Algorithm. This Detectes the palm and fist. Then the position of their mid point on frame image is used to find out where to move the Bot.
