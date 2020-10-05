@@ -6,8 +6,11 @@ The bot recognises the palm using OpenCV and moves with its movement. Fist is us
 # Files
 Hand_Gesture_Remote.py is for Laptop to detect hand gestures and simulate keyboard command presses.\
 The files named 'yolov3-tiny-obj.cfg' and 'yolov3-tiny-obj_7000.weights' are the configuration and weights files for the Yolo model respectively, they are to be saved in the same folder as the Hand_Gesture_Remote.py file.\
+
+Link to yolov3-tiny-obj_7000.weights = https://drive.google.com/file/d/1WVk7HtFVTurrH8YJdmKQYW33tVyJ5tk8/view?usp=sharing
+
 Rest all files are for controlling the Raspberry Pi.\
-The Raspberyy Pi and Laptop should be connected to each other.\
+The Raspberry Pi and Laptop should be connected to each other.\
 The main_ssh.py file is to be run, this file accepts input such was 'w', 'a', 's', 'd', etc from the Laptop Keyboard and the Bot in the required direction.
 
 # Hand Gesture
